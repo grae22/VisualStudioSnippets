@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+          <Title>Test Method</Title>
+          <Description>Inserts a test method.</Description>
+          <Author>Graeme</Author>
+          <Shortcut>tstm</Shortcut>
+          <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+          </SnippetTypes>          
+        </Header>
+        <Snippet>
+			<Declarations>
+                <Literal>
+                    <ID>category</ID>
+                    <ToolTip>Category</ToolTip>
+                    <Default>TestCategory</Default>
+                </Literal>
+                <Literal>
+                    <ID>methodName</ID>
+                    <ToolTip>Test method name</ToolTip>
+                    <Function>NewTest()</Function>
+                    <Default>NewTest</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp" Kind="any">
+                <![CDATA[
+                  [Test]
+				  [Category("$category$")]
+				  public void $methodName$()
+				  {
+				  }
+				  
+				  //-------------------------------------------------------------------------]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
