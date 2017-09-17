@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+          <Title>Test Class</Title>
+          <Description>Sets up a test class.</Description>
+          <Author>Graeme</Author>
+          <Shortcut>tstc</Shortcut>
+          <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+          </SnippetTypes>          
+        </Header>
+        <Snippet>
+			<Declarations>
+                <Literal>
+                    <ID>projectName</ID>
+                    <ToolTip>Project name</ToolTip>
+                    <Default>ProjectName</Default>
+                </Literal>
+                <Literal>
+                    <ID>classNamespace</ID>
+                    <ToolTip>Class namespace</ToolTip>
+                    <Default>ClassNamespace</Default>
+                </Literal>
+                <Literal>
+                    <ID>testNamespace</ID>
+                    <ToolTip>Test namespace</ToolTip>
+                    <Default>TestNamespace</Default>
+                </Literal>
+                <Literal>
+                    <ID>className</ID>
+                    <ToolTip>Class name</ToolTip>
+                    <Default>ClassName</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp" Kind="any">
+<![CDATA[using NUnit.Framework;
+using Moq;
+using $projectName$.$classNamespace$;
+
+namespace $projectName$_Test$classNamespace$
+{
+  [TestFixture]
+  [Category("$className$")]
+  internal class $className$_Test
+  {
+    //-------------------------------------------------------------------------
+
+    private $className$ _testObject;
+
+    //-------------------------------------------------------------------------
+
+    [SetUp]
+    public void SetUp()
+    {
+      _testObject = new $className$();
+    }
+
+    //-------------------------------------------------------------------------
+  }
+}]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
