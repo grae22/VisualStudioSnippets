@@ -20,16 +20,30 @@
                 <Literal>
                     <ID>methodName</ID>
                     <ToolTip>Test method name</ToolTip>
-                    <Function>NewTest()</Function>
-                    <Default>NewTest</Default>
+                    <Default>MethodName</Default>
+                </Literal>
+                <Literal>
+                    <ID>condition</ID>
+                    <ToolTip>Conditions under which test is performed</ToolTip>
+                    <Default>Condition</Default>
+                </Literal>
+                <Literal>
+                    <ID>expected</ID>
+                    <ToolTip>Expected behaviour</ToolTip>
+                    <Default>Expected</Default>
                 </Literal>
             </Declarations>
             <Code Language="CSharp" Kind="any">
                 <![CDATA[
                   [Test]
 				  [Category("$category$")]
-				  public void $methodName$()
+				  public void $methodName$_Given$condition$_Should$expected$()
 				  {
+            // Arrange.
+            
+            // Act.
+            
+            // Assert.
 				  }
 				  
 				  //-------------------------------------------------------------------------]]>
