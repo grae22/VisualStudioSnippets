@@ -13,11 +13,6 @@
         <Snippet>
 			<Declarations>
                 <Literal>
-                    <ID>category</ID>
-                    <ToolTip>Category</ToolTip>
-                    <Default>TestCategory</Default>
-                </Literal>
-                <Literal>
                     <ID>methodName</ID>
                     <ToolTip>Test method name</ToolTip>
                     <Default>MethodName</Default>
@@ -34,9 +29,7 @@
                 </Literal>
             </Declarations>
             <Code Language="CSharp" Kind="any">
-                <![CDATA[
-                  [Test]
-				  [Category("$category$")]
+            <![CDATA[[Test]
 				  public void $methodName$_Given$condition$_Should$expected$()
 				  {
             // Arrange.
@@ -44,9 +37,7 @@
             // Act.
             
             // Assert.
-				  }
-				  
-				  //---------------------------------------------------------------------------------------------]]>
+				  }]]>
             </Code>
         </Snippet>
     </CodeSnippet>
