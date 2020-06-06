@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?> 
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+          <Title>BDD Test Method</Title>
+          <Description>Inserts a BDD style test method.</Description>
+          <Author>Graeme</Author>
+          <Shortcut>tstb</Shortcut>
+          <SnippetTypes>
+            <SnippetType>Expansion</SnippetType>
+          </SnippetTypes>          
+        </Header>
+        <Snippet>
+			<Declarations>
+                <Literal>
+                    <ID>precondition</ID>
+                    <ToolTip>Test precondition.</ToolTip>
+                    <Default>PRECONDITION</Default>
+                </Literal>
+                <Literal>
+                    <ID>action</ID>
+                    <ToolTip>Test action.</ToolTip>
+                    <Default>ACTION</Default>
+                </Literal>
+                <Literal>
+                    <ID>outcome</ID>
+                    <ToolTip>Expected behaviour/outcome.</ToolTip>
+                    <Default>OUTCOME</Default>
+                </Literal>
+            </Declarations>
+            <Code Language="CSharp" Kind="any">
+            <![CDATA[[Test]
+				  public void Given$precondition$_When$action$_Then$outcome$()
+				  {
+            // Arrange.
+            
+            // Act.
+            
+            // Assert.
+				  }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
